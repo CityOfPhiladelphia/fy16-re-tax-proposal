@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Property | phila.gov</title>
+    <title>Estimated Property Taxes for 2016 | phila.gov</title>
     <link rel="icon" type="image/x-icon" href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
-    <meta name="description" content="Search for real estate properties and gather information on taxes, districts, etc.">
-    <meta property="og:title" content="Property | phila.gov" />
-    <meta property="og:url" content="http://alpha.phila.gov/property" />
-    <meta property="og:site_name" content="Property" />
+    <meta name="description" content="Learn how your real estate taxes will be invested in your local schools under the Mayor's proposed budget for fiscal year 2016.">
+    <meta property="og:title" content="Estimated Property Taxes for 2016 | phila.gov" />
+    <meta property="og:url" content="http://alpha.phila.gov/fy16-property-taxes" />
+    <meta property="og:site_name" content="Estimated Property Taxes for 2016" />
     <meta property="og:image" content="img/property.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1000">
     <meta property="og:image:height" content="737">
-    <meta property="og:description" content="Search for real estate properties and gather information on taxes, districts, and city services" />
+    <meta property="og:description" content="Learn how your real estate taxes will be invested in your local schools under the Mayor's proposed budget for fiscal year 2016." />
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@PhiladelphiaGov" />
     <meta name="twitter:creator" content="@PhiladelphiaGov" />
@@ -39,24 +39,11 @@
       })(window,document,'script','dataLayer','GTM-KDM9KV');</script>
     <!-- End Google Tag Manager -->
     <div id="application" class="site">
-      <div id="alpha-alert">
-        <div class="row">
-          <div class="large-17 medium-15 columns">
-            <h1 class="h3">This service is in alpha</h1> <p>This is a work in progress. It may contain errors and inaccuracies. Help us improve it by providing feedback.</p>
-            <p><a href="http://alpha.phila.gov/about/">Learn more &raquo;</a></p>
-          </div>
-          <div class="large-7 medium-9 columns">
-            <div class="button icon alternate"><a class="feedback" href="http://insights.hotjar.com/s?siteId=18849&surveyId=1136" target="_blank">Provide Feedback<span class="accessible"> Opens in new window</span><i class="fa fa-comments"></i></a></div>
-            <div class="button icon alternate"><a class="go-back" href="http://property.phila.gov" target="_blank">
-              Back to current site<span class="accessible"> Opens in new window</span><i class="fa fa-reply"></i></a></div>
-          </div>
-        </div>
-      </div>
       <header class="site-header app" role="banner">
         <div class="row">
           <div class="small-24 medium-24 column">
             <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale" alt="City of Philadelphia"></a>
-            <h1 class="page-title" data-hook="app-title">Property</h1>
+            <h1 class="page-title" data-hook="app-title">Estimated Property Taxes for 2016</h1>
           </div>
         </div>
       </header>
@@ -69,7 +56,7 @@
         <div id="breadcrumbs" class="large-24 columns">
           <ul data-hook="crumbs" class="inline-list">
             <li><a href="http://alpha.phila.gov">alpha.phila.gov</a></li>
-            <li>Property</li>
+            <li>Estimated Property Taxes for 2016</li>
           </ul>
         </div>
       </div>
@@ -79,7 +66,7 @@
           <div data-hook="search-box" class="search-box medium-16 columns">
             <form data-hook="search-form" class="search hint">
               <input type="text" data-hook="search" name="q">
-              <p class="show-for-medium-up">e.g. 1234 Market Street, 883309000, 12th and Market, 1200-1299 Market</p>
+              <p class="show-for-medium-up">e.g. 1234 Market Street, 883309000, 12th and Market, 1200-1298 Market</p>
               <input type="submit">
             </form>
           </div>
@@ -182,10 +169,9 @@
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-map-marker fa-inverse"></i>
         </span>
-        View valuation, tax, and physical details of properties within the City of Philadelphia.</p>
+        Learn how your real estate taxes will be invested in your local schools under the Mayor's proposed budget for fiscal year 2016.</p>
         <div class="callout">
-          <p>Use this application to search and compare property data in the City of Philadelphia.<br>
-          By using this application, you have agreed to its <a data-reveal-id="terms-modal" href="#">Terms &amp; Conditions.</a></p>
+          <p>You can use this application to estimate changes to your real estate taxes. By using it, you have agreed to its <a data-reveal-id="terms-modal" href="#">Terms &amp; Conditions.</a></p>
         </div>
       </div>
 
@@ -215,254 +201,124 @@
         <h1></h1><div class="small-text"></div>
       </div>
 
-      <!-- Property view side panel -->
-      <div data-hook="property-side" class="property-side large-10 columns">
-        <div class="hide-for-large-up"><h3 class="alternate divide">Property Details</h4></div>
-        <div class="panel">
-          <div class="row">
-            <div class="columns street-view">
-              <div data-hook="street-view-map" class="map"></div>
-              <a href="#" data-hook="street-view-toggle" class="hide street-view-toggle">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-stop fa-stack-2x"></i>
-                  <i class="fa fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-24 columns">
-              <h4 class="alternate">Improvement Description</h4>
-              <div data-hook="improvement-description" class="h3"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="medium-10 columns">
-              <h4 class="alternate">Land Area <span class="normal">(SqFt)</span></h4>
-              <div data-hook="land-area" class="h2 no-margin xtra-lg"></div>
-            </div>
-            <div class="medium-14 columns">
-              <h4 class="alternate">Improvement Area <span class="normal">(SqFt)</span></h4>
-              <div data-hook="improvement-area" class="h2 no-margin xtra-lg"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-24 columns">
-              <h4 class="alternate">Zoning</h4>
-              <div data-hook="zoning" class="h3"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-24 columns">
-              <h4 class="alternate">Trash &amp; Recycling</h4>
-              <div data-hook="rubbish-day" class="h1 xtra-lg no-margin"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Property view main content area -->
-      <div data-hook="property-main" class="property-main large-14 columns">
-        <div class="row"> <!-- Begin owners -->
-          <div class="columns">
-            <h2 class="alternate divide">Owner</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="owner-name medium-15 columns">
-            <h2 data-hook="property-owners" class="xtra-lg no-margin owners"></h2>
-          </div>
-          <div class="medium-9 columns">
-            <h4 data-hook="property-mailing-header" class="alternate no-margin">Mailing Address</h4>
-            <div data-hook="property-mailing" class="bold mailing"></div>
-          </div>
-        </div> <!-- End owners -->
-        <div class="row"> <!-- Begin taxes -->
-          <div class="hide-for-print columns">
-            <h2 class="alternate divide">Real Estate Taxes</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="hide-for-print medium-14 columns"><p class="no-margin normal">Real Estate Tax account balances have not been incorporated into this application.</p></div>
-          <div class="medium-10 columns align-right">
-            <a class="button no-margin" href="http://www.phila.gov/revenue/realestatetax">Current Tax Balance</a>
-            <div class="small-text">On Department of Revenue website</div>
-          </div>
-        </div> <!-- End taxes -->
-        <div class="row"> <!-- Begin valuation -->
-          <div class="columns">
-            <h2 class="alternate divide">Valuation History</h2>
-          </div>
-        </div>
+      <div data-hook="property-main" class="property-main large-24 columns text-center">
         <div class="row">
           <div class="columns">
-            <table role="grid" summary="Valuation History" class="responsive">
-              <thead>
-                <tr>
-                  <th>Year</th>
-                  <th>Market Value</th>
-                  <th>Taxable Land</th>
-                  <th>Taxable Improvement</th>
-                  <th>Exempt Land</th>
-                  <th>Exempt Improvement</th>
-                </tr>
-              </thead>
-              <tbody data-hook="valuation">
-              </tbody>
-            </table>
-          </div>
-        </div> <!-- End valuation -->
-        <div class="row"> <!-- Begin sales details -->
-          <div class="columns">
-            <h2 class="alternate divide">Sales Details</h2>
+            <div class="panel">
+            <p>
+              The Mayor's proposed budget for fiscal year 2016 [?] will increase real estate taxes from 1.34% to 1.4651% to invest in Philadelphia Public Schools. This property's taxes would increase:
+            </p>
+            <p>
+              <span data-hook="tax-increase-annual" class="h1" style="font-size:4em;">$104</span>
+              a year
+            </p>
+            <p>
+              That's only <span data-hook="tax-increase-week" class="h3">$2</span>
+              a week, or
+              <span data-hook="tax-increase-day" class="h3">28&cent;</span>
+              a day
+            </p>
+
+            <a class="button alternate" href="#">Show me the details</a>
+            </div>
           </div>
         </div>
+
         <div class="row">
           <div class="columns">
-            <div class="panel sales">
-              <div class="row">
-                <div class="medium-12 columns">
-                  <h3>Sales Price</h3>
-                  <div data-hook="sales-price" class="xtra-lg"></div>
-                </div>
-                <div class="medium-12 columns">
-                  <h3>Sales Date</h3>
-                  <div data-hook="sales-date"></div>
+            <p>
+              Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
+            </p>
+
+            <div class="row">
+              <div class="columns">
+                <h1><span data-hook="elementary-school"></span> Elementary School</h1>
+              </div>
+
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">+5</span><br> teaching staff
                 </div>
               </div>
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">+10</span><br> support staff
+                </div>
+              </div>
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">$17K</span><br> supplies
+                </div>
+              </div>
+
+              <a class="button alternate" href="#">Show me the details</a>
+            </div>
+
+            <div class="row">
+              <div class="columns">
+                <h1><span data-hook="middle-school"></span> Middle School</h1>
+              </div>
+
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">+5</span><br> teaching staff
+                </div>
+              </div>
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">+10</span><br> support staff
+                </div>
+              </div>
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">$17K</span><br> supplies
+                </div>
+              </div>
+
+              <a class="button alternate" href="#">Show me the details</a>
+            </div>
+
+            <div class="row">
+              <div class="columns">
+                <h1><span data-hook="high-school"></span> High School</h1>
+              </div>
+
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">+5</span><br> teaching staff
+                </div>
+              </div>
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">+10</span><br> support staff
+                </div>
+              </div>
+              <div class="columns medium-8 text-left">
+                <img src="http://placehold.it/100" class="left">
+                <div class="investment-details">
+                  <span class="h1" style="font-size:3em;">$17K</span><br> supplies
+                </div>
+              </div>
+
+              <a class="button alternate" href="#">Show me the details</a>
             </div>
           </div>
         </div>
+
+
+
+
       </div> <!-- End property main -->
 
-      <!-- Property view secondary content area -->
-      <div data-hook="property-secondary" class="medium-24 large-14 columns">
-        <div class="row"> <!-- Begin service area -->
-          <div class="columns">
-            <h2 class="alternate divide">Service Area</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="medium-12 columns">
-            <div class="panel">
-              <h3>School Catchment</h3>
-              <h4 class="alternate">Elementary School</h4>
-              <div data-hook="elementary-school"></div>
-              <h4 class="alternate">Middle School</h4>
-              <div data-hook="middle-school"></div>
-              <h4 class="alternate">High School</h4>
-              <div data-hook="high-school"></div>
-            </div>
-          </div>
-          <div class="medium-12 columns">
-            <div class="panel">
-              <h3>Political</h3>
-              <h4 class="alternate">2016 Councilmanic District</h4>
-              <div data-hook="council-district"></div>
-              <h4 class="alternate">Ward</h4>
-              <div data-hook="ward"></div>
-              <h4 class="alternate">Ward Divisions</h4>
-              <div data-hook="ward-divisions"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="columns">
-            <div class="panel">
-              <div class="row">
-                <div class="columns">
-                  <h3>Public Safety</h3>
-                </div>
-              </div>
-              <div class="row">
-                <div class="medium-12 columns">
-                  <h4 class="alternate">Police Public Service Area</h4>
-                  <div data-hook="police-psa"></div>
-                  <h4 class="alternate">Police District</h4>
-                  <div data-hook="police-district"></div>
-                  <h4 class="alternate">Police Sector</h4>
-                  <div data-hook="police-sector"></div>
-                </div>
-                <div class="medium-12 columns">
-                  <h4 class="alternate">Police Division</h4>
-                  <div data-hook="police-division"></div>
-                  <h4 class="alternate">Fire District</h4>
-                  <div data-hook="fire-district"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="columns">
-            <div class="panel">
-              <div class="row">
-                <div class="columns">
-                  <h3>Streets</h3>
-                </div>
-              </div>
-              <div class="row">
-                <div class="medium-12 columns">
-                  <h4 class="alternate">Highway District</h4>
-                  <div data-hook="highway-district"></div>
-                  <h4 class="alternate">Highway Section</h4>
-                  <div data-hook="highway-section"></div>
-                  <h4 class="alternate">Highway Subsection</h4>
-                  <div data-hook="highway-subsection"></div>
-                  <h4 class="alternate">Street Light Routes</h4>
-                  <div data-hook="street-light-routes"></div>
-                  <h4 class="alternate">Traffic District</h4>
-                  <div data-hook="traffic-district"></div>
-                </div>
-                <div class="medium-12 columns">
-                  <h4 class="alternate">Recycling Diversion Rate</h4>
-                  <div data-hook="recycling-diversion"></div>
-                  <h4 class="alternate">Sanitation Area</h4>
-                  <div data-hook="sanitation-area"></div>
-                  <h4 class="alternate">Sanitation District</h4>
-                  <div data-hook="sanitation-district"></div>
-                  <h4 class="alternate">Leaf Collection Day</h4>
-                  <div data-hook="leaf-collection"></div>
-                  <h4 class="alternate">Traffic PM District</h4>
-                  <div data-hook="traffic-pm-district"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="medium-12 columns">
-            <div class="panel">
-              <h3>Districts</h3>
-              <h4 class="alternate">Planning</h4>
-              <div data-hook="planning"></div>
-              <h4 class="alternate">PWD Center City</h4>
-              <div data-hook="pwd-center-city"></div>
-              <h4 class="alternate">Center City</h4>
-              <div data-hook="center-city"></div>
-              <h4 class="alternate">Historic</h4>
-              <div data-hook="historic"></div>
-              <h4 class="alternate">Recreation</h4>
-              <div data-hook="recreation"></div>
-              <h4 class="alternate">Philly Rising Boundaries</h4>
-              <div data-hook="philly-rising"></div>
-            </div>
-          </div>
-          <div class="medium-12 columns">
-            <div class="panel">
-              <h3>Water</h3>
-              <h4 class="alternate">PWD Maintenance Districts</h4>
-              <div data-hook="pwd-maintenance"></div>
-              <h4 class="alternate">PWD Pressure Districts</h4>
-              <div data-hook="pwd-pressure"></div>
-              <h4 class="alternate">Water Treatment Plant</h4>
-              <div data-hook="water-treatment"></div>
-              <h4 class="alternate">Water Plate Index</h4>
-              <div data-hook="water-plate"></div>
-            </div>
-          </div>
-        </div> <!-- End service area -->
-      </div><!-- End secondary content area -->
     </div> <!-- End templates -->
 
 

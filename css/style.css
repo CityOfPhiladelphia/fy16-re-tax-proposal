@@ -71,11 +71,6 @@ p {
 table thead tr th, table thead tr td{
     font-size:.7rem;
 }
-.panel, .bold {
-  font-family: 'Montserrat', 'Tahoma', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 .owners {
     line-height:1;
 }
@@ -124,6 +119,10 @@ table thead tr th, table thead tr td{
 }
 .hidden{
   display:none !important;
+}
+
+.investment-details {
+  padding-left: 110px;
 }
 
 /* print-specific*/
