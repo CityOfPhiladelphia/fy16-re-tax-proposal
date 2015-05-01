@@ -201,6 +201,114 @@
         <h1></h1><div class="small-text"></div>
       </div>
 
+      <!-- School template -->
+      <div data-hook="school-details" class="row">
+        <div class="columns">
+          <h1>{{name}}</h1>
+        </div>
+
+        <div class="columns medium-8 text-left">
+          <img src="http://placehold.it/100" class="left">
+          <div class="investment-details">
+            <span class="h2 xtra-lg">+{{teachers_gain}}</span><br> teaching staff
+          </div>
+        </div>
+        <div class="columns medium-8 text-left">
+          <img src="http://placehold.it/100" class="left">
+          <div class="investment-details">
+            <span class="h2 xtra-lg">+{{support_gain}}</span><br> support staff
+          </div>
+        </div>
+        <div class="columns medium-8 text-left">
+          <img src="http://placehold.it/100" class="left">
+          <div class="investment-details">
+            <span class="h2 xtra-lg">{{supplies_gain}}</span><br> supplies
+          </div>
+        </div>
+
+        <a class="button alternate" href="#">Show me the details</a>
+
+        <table role="grid" summary="The details of how your taxes will benefit {{}}">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Current Budget</th>
+              <th>With Your Investment</th>
+              <th>Difference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Principals/Assistant Principals</td>
+              <td>{{principals_current}}</td>
+              <td>{{principals_proposed}}</td>
+              <td>{{principals_diff}}</td>
+            </tr>
+            <tr>
+              <td>Teachers</td>
+              <td>{{teachers_current}}</td>
+              <td>{{teachers_proposed}}</td>
+              <td>{{teachers_diff}}</td>
+            </tr>
+            <tr>
+              <td>Teachers - Special Education</td>
+              <td>{{special_ed_current}}</td>
+              <td>{{special_ed_proposed}}</td>
+              <td>{{special_ed_diff}}</td>
+            </tr>
+            <tr>
+              <td>Counselors</td>
+              <td>{{counselors_current}}</td>
+              <td>{{counselors_proposed}}</td>
+              <td>{{counselors_diff}}</td>
+            </tr>
+            <tr>
+              <td>Nurses/Health Services</td>
+              <td>{{nurses_current}}</td>
+              <td>{{nurses_proposed}}</td>
+              <td>{{nurses_diff}}</td>
+            </tr>
+            <tr>
+              <td>Classroom Assistants</td>
+              <td>{{assistants_current}}</td>
+              <td>{{assistants_proposed}}</td>
+              <td>{{assistants_diff}}</td>
+            </tr>
+            <tr>
+              <td>Secretaries</td>
+              <td>{{secretaries_current}}</td>
+              <td>{{secretaries_proposed}}</td>
+              <td>{{secretaries_diff}}</td>
+            </tr>
+            <tr>
+              <td>Support Services</td>
+              <td>{{support_current}}</td>
+              <td>{{support_proposed}}</td>
+              <td>{{support_diff}}</td>
+            </tr>
+            <tr>
+              <td>Noon-time Aides</td>
+              <td>{{noon_aides_current}}</td>
+              <td>{{noon_aides_proposed}}</td>
+              <td>{{noon_aides_diff}}</td>
+            </tr>
+            <tr>
+              <td>Other</td>
+              <td>{{other_current}}</td>
+              <td>{{other_proposed}}</td>
+              <td>{{other_diff}}</td>
+            </tr>
+            <tr>
+              <td>Supplies/Equipment/Technology</td>
+              <td>{{supplies_current}}</td>
+              <td>{{supplies_proposed}}</td>
+              <td>{{supplies_diff}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
       <!-- Property view main content area -->
       <div data-hook="property-main" class="property-main large-24 columns text-center">
         <div class="row">
@@ -224,7 +332,7 @@
 
               <div class="row">
                 <div class="columns small-12">
-                  <h3>Current estimated property tax <br> as of July 1, 2015</h3>
+                  <h3>Current Estimated Property Tax <br> as of July 1, 2015</h3>
                   <dl class="row">
                     <dt class="small-12 column">Tax Rate</dt>
                     <dd class="small-12 column text-right" data-hook="current-rate">a</dd>
@@ -239,7 +347,7 @@
                   </dl>
                 </div>
                 <div class="columns small-12">
-                  <h3>ESTIMATED PROPERTY TAX - MAYOR'S PROPOSAL  <br> as of July 1, 2015</h3>
+                  <h3>Estimated Property Tax - Mayor's Proposal  <br> as of July 1, 2015</h3>
                   <dl class="row">
                     <dt class="small-12 column">Tax Rate</dt>
                     <dd class="small-12 column text-right" data-hook="proposed-rate">a</dd>
@@ -266,91 +374,9 @@
               Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
             </p>
 
-            <div class="row">
-              <div class="columns">
-                <h1><span data-hook="elementary-school"></span> Elementary School</h1>
-              </div>
-
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h2 xtra-lg">+5</span><br> teaching staff
-                </div>
-              </div>
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h2 xtra-lg">+10</span><br> support staff
-                </div>
-              </div>
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h2 xtra-lg">$17K</span><br> supplies
-                </div>
-              </div>
-
-              <a class="button alternate" href="#">Show me the details</a>
-            </div>
-
-            <div class="row">
-              <div class="columns">
-                <h1><span data-hook="middle-school"></span> Middle School</h1>
-              </div>
-
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h1" style="font-size:3em;">+5</span><br> teaching staff
-                </div>
-              </div>
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h1" style="font-size:3em;">+10</span><br> support staff
-                </div>
-              </div>
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h1" style="font-size:3em;">$17K</span><br> supplies
-                </div>
-              </div>
-
-              <a class="button alternate" href="#">Show me the details</a>
-            </div>
-
-            <div class="row">
-              <div class="columns">
-                <h1><span data-hook="high-school"></span> High School</h1>
-              </div>
-
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h1" style="font-size:3em;">+5</span><br> teaching staff
-                </div>
-              </div>
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h1" style="font-size:3em;">+10</span><br> support staff
-                </div>
-              </div>
-              <div class="columns medium-8 text-left">
-                <img src="http://placehold.it/100" class="left">
-                <div class="investment-details">
-                  <span class="h1" style="font-size:3em;">$17K</span><br> supplies
-                </div>
-              </div>
-
-              <a class="button alternate" href="#">Show me the details</a>
-            </div>
+            <div data-hook="school-list"></div>
           </div>
         </div>
-
-
-
 
       </div> <!-- End property main -->
 
@@ -359,6 +385,7 @@
 
     <script src="//maps.googleapis.com/maps/api/js?v=3.19&sensor=false&libraries=geometry"></script>
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
     <script src="//cityofphiladelphia.github.io/patterns/dist/0.6.0/js/patterns.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
@@ -366,6 +393,7 @@
     <script src="js/responsive-tables.js"></script>
     <script src="js/deparam.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/views/front.js"></script>
     <script src="js/views/results.js"></script>
     <script src="js/views/property.js"></script>

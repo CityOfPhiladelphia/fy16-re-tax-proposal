@@ -1,4 +1,4 @@
-/*global $,app,google,accounting*/
+/*global $,app,google,accounting,Mustache*/
 
 app.views.property = function (accountNumber) {
   var alreadyGettingOpaData, opaRendered, opaDetailsRendered;
@@ -98,10 +98,8 @@ app.views.property = function (accountNumber) {
     app.hooks.propertyTitle.find('h1').text(state.address);
     app.hooks.propertyTitle.find('.small-text').text('#' + state.opa.account_number);
 
-    // School names
-    app.hooks.elementarySchool.empty();
-    app.hooks.middleSchool.empty();
-    app.hooks.highSchool.empty();
+    // Schools
+    app.hooks.schoolList.empty();
 
     // Tax differences
     app.hooks.taxIncreaseAnnual.html(increaseAnnualPretty);
@@ -132,7 +130,8 @@ app.views.property = function (accountNumber) {
   }
 
   function renderSa () {
-    var state = history.state;
+    var state = history.state,
+        elementarySchool, middleSchool, highSchool;
 
     // No use rendering if there's been a data error
     if (state.error || state.sa.error) return;
@@ -140,18 +139,43 @@ app.views.property = function (accountNumber) {
     // Wait for both OPA render and SA data
     if (!opaRendered || !state.sa) return;
 
-    // Render service areas
+    // Get school keys
     state.sa.forEach(function (sa) {
       switch (sa.serviceAreaId) {
         // School catchment
         case 'SA_SCHOOLS_Elementary_School_Catchment':
-          return app.hooks.elementarySchool.text(sa.value);
+          elementarySchool = sa.value;
+          break;
         case 'SA_SCHOOLS_Middle_School_Catchment':
-          return app.hooks.middleSchool.text(sa.value);
+          middleSchool = sa.value;
+          break;
         case 'SA_SCHOOLS_High_School_Catchment':
-          return app.hooks.highSchool.text(sa.value);
+          highSchool = sa.value;
       }
     });
+
+    // Render schools, in order
+    renderSchool(elementarySchool, 'Elementary School');
+    renderSchool(middleSchool, 'Middle School');
+    renderSchool(highSchool, 'High School');
+  }
+
+  function renderSchool(schoolId, schoolType) {
+    var html = app.hooks.schoolDetails.html(),
+        data = $.extend({
+          name: schoolId + ' ' + schoolType
+        }, app.data.schools.test);
+
+    // Teacher increase
+    data.teachers_gain = data.principals_diff + data.teachers_diff + data.special_ed_diff;
+    // Support staff increase
+    data.support_gain = data.counselors_diff + data.nurses_diff + data.assistants_diff +
+      data.secretaries_diff + data.support_diff + data.noon_aides_diff + data.other_diff;
+    // Supplies funds increase
+    data.supplies_gain = accounting.formatMoney(data.supplies_diff);
+
+    // Render
+    app.hooks.schoolList.append(Mustache.render(html, data));
   }
 
   function renderError () {
