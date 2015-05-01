@@ -72,6 +72,7 @@ app.views.property = function (accountNumber) {
     var state = history.state,
         fy16 = state.opa.valuation_history[0],
         taxable = fy16.land_taxable + fy16.improvement_taxable,
+        exempt = fy16.land_exempt + fy16.improvement_exempt,
         rateProposed = 0.014651,
         rateCurrent = 0.0134,
         totalProposed = taxable * rateProposed,
@@ -84,10 +85,10 @@ app.views.property = function (accountNumber) {
         increaseDayPretty = accounting.formatMoney(increaseDay);
 
 
+    // Daily dollars to cents
     if (increaseDay < 1) {
       increaseDayPretty = increaseDay.toFixed(2) + '&cent;';
     }
-
 
     // Breadcrumbs
     app.hooks.propertyCrumb.text(state.address);
@@ -102,9 +103,24 @@ app.views.property = function (accountNumber) {
     app.hooks.middleSchool.empty();
     app.hooks.highSchool.empty();
 
+    // Tax differences
     app.hooks.taxIncreaseAnnual.html(increaseAnnualPretty);
     app.hooks.taxIncreaseWeek.html(increaseWeekPretty);
     app.hooks.taxIncreaseDay.html(increaseDayPretty);
+
+    // Tax details
+    app.hooks.currentRate.text((rateCurrent * 100) + '%');
+    app.hooks.currentTaxValue.text(accounting.formatMoney(totalCurrent));
+    app.hooks.currentMarketValue.text(accounting.formatMoney(fy16.market_value));
+    app.hooks.currentAbatementValue.text(accounting.formatMoney(exempt));
+    app.hooks.currentTaxableValue.text(accounting.formatMoney(taxable));
+
+
+    app.hooks.proposedRate.text((rateProposed * 100) + '%');
+    app.hooks.proposedTaxValue.text(accounting.formatMoney(totalProposed));
+    app.hooks.proposedMarketValue.text(accounting.formatMoney(fy16.market_value));
+    app.hooks.proposedAbatementValue.text(accounting.formatMoney(exempt));
+    app.hooks.proposedTaxableValue.text(accounting.formatMoney(taxable));
 
 
     // Clear loading...
