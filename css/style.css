@@ -29,11 +29,12 @@ body {
 }
 
 .h1.xtra-lg {
-  font-size: 4em;
+  font-size: 3em;
 }
 
-.h2.xtra-lg {
-  font-size: 3em;
+hr {
+  height: 5px;
+  background: #666666;
 }
 
 @media only screen and (max-width: 40em) {
@@ -65,12 +66,17 @@ p {
   font-size:.9rem;
 }
 .button{
-  width:100%;
+  font-size: 0.5em;
+  padding: 0.7em;
 }
 .small-text{
   font-family:"Open Sans","Arial",sans-serif;
   font-weight:normal;
   text-transform:none;
+}
+.large-text {
+  font-size: 1.2em;
+  color: #666666;
 }
 table thead tr th, table thead tr td{
     font-size:.7rem;
