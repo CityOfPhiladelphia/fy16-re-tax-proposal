@@ -242,67 +242,67 @@
               <td>Principals/Assistant Principals</td>
               <td>{{principals_current}}</td>
               <td>{{principals_proposed}}</td>
-              <td>{{principals_diff}}</td>
+              <td>+{{principals_diff}}</td>
             </tr>
             <tr>
               <td>Teachers</td>
               <td>{{teachers_current}}</td>
               <td>{{teachers_proposed}}</td>
-              <td>{{teachers_diff}}</td>
+              <td>+{{teachers_diff}}</td>
             </tr>
             <tr>
               <td>Teachers - Special Education</td>
               <td>{{special_ed_current}}</td>
               <td>{{special_ed_proposed}}</td>
-              <td>{{special_ed_diff}}</td>
+              <td>+{{special_ed_diff}}</td>
             </tr>
             <tr>
               <td>Counselors</td>
               <td>{{counselors_current}}</td>
               <td>{{counselors_proposed}}</td>
-              <td>{{counselors_diff}}</td>
+              <td>+{{counselors_diff}}</td>
             </tr>
             <tr>
               <td>Nurses/Health Services</td>
               <td>{{nurses_current}}</td>
               <td>{{nurses_proposed}}</td>
-              <td>{{nurses_diff}}</td>
+              <td>+{{nurses_diff}}</td>
             </tr>
             <tr>
               <td>Classroom Assistants</td>
               <td>{{assistants_current}}</td>
               <td>{{assistants_proposed}}</td>
-              <td>{{assistants_diff}}</td>
+              <td>+{{assistants_diff}}</td>
             </tr>
             <tr>
               <td>Secretaries</td>
               <td>{{secretaries_current}}</td>
               <td>{{secretaries_proposed}}</td>
-              <td>{{secretaries_diff}}</td>
+              <td>+{{secretaries_diff}}</td>
             </tr>
             <tr>
               <td>Support Services</td>
               <td>{{support_current}}</td>
               <td>{{support_proposed}}</td>
-              <td>{{support_diff}}</td>
+              <td>+{{support_diff}}</td>
             </tr>
             <tr>
               <td>Noon-time Aides</td>
               <td>{{noon_aides_current}}</td>
               <td>{{noon_aides_proposed}}</td>
-              <td>{{noon_aides_diff}}</td>
+              <td>+{{noon_aides_diff}}</td>
             </tr>
             <tr>
               <td>Other</td>
               <td>{{other_current}}</td>
               <td>{{other_proposed}}</td>
-              <td>{{other_diff}}</td>
+              <td>+{{other_diff}}</td>
             </tr>
             <tr>
               <td>Supplies/Equipment/Technology</td>
               <td>{{supplies_current}}</td>
               <td>{{supplies_proposed}}</td>
-              <td>{{supplies_diff}}</td>
+              <td>${{supplies_diff}}</td>
             </tr>
           </tbody>
         </table>
@@ -335,35 +335,37 @@
 
               <a class="button details-toggle" href="#">Show Details</a>
 
-              <div data-hook="property-details" class="row details hidden">
-                <div class="columns small-12">
-                  <h3>Current Estimated Property Tax <br> as of July 1, 2015</h3>
-                  <dl class="row">
-                    <dt class="small-12 column">Tax Rate</dt>
-                    <dd class="small-12 column text-right" data-hook="current-rate">a</dd>
+              <div data-hook="property-details" class="row details hidden text-left">
+
+                <hr>
+
+                <div class="columns medium-12">
+                  <h4>Valuation and Abatements<br>&nbsp;</h4>
+
+                  <dl class="row small-text">
                     <dt class="small-12 column">Market Value</dt>
                     <dd class="small-12 column text-right" data-hook="current-market-value">a</dd>
                     <dt class="small-12 column">Abatement Value</dt>
                     <dd class="small-12 column text-right" data-hook="current-abatement-value">a</dd>
                     <dt class="small-12 column">Taxable Assessed Value</dt>
                     <dd class="small-12 column text-right" data-hook="current-taxable-value">a</dd>
-                    <dt class="small-12 column">Annual Property Tax</dt>
-                    <dd class="small-12 column text-right" data-hook="current-tax-value">a</dd>
                   </dl>
                 </div>
-                <div class="columns small-12">
-                  <h3>Estimated Property Tax - Mayor's Proposal  <br> as of July 1, 2015</h3>
-                  <dl class="row">
+                <div class="columns medium-12">
+                  <h4>Current Estimated Property Tax <br> as of July 1, 2015</h4>
+                  <dl class="row small-text">
+                    <dt class="small-12 column">Tax Rate</dt>
+                    <dd class="small-12 column text-right" data-hook="current-rate">a</dd>
+                    <dt class="small-12 column"><strong>Annual Property Tax</strong></dt>
+                    <dd class="small-12 column text-right"><strong data-hook="current-tax-value">N/A</strong></dd>
+                  </dl>
+
+                  <h4>Estimated Property Tax - Mayor's Proposal  <br> as of July 1, 2015</h4>
+                  <dl class="row small-text">
                     <dt class="small-12 column">Tax Rate</dt>
                     <dd class="small-12 column text-right" data-hook="proposed-rate">a</dd>
-                    <dt class="small-12 column">Market Value</dt>
-                    <dd class="small-12 column text-right" data-hook="proposed-market-value">a</dd>
-                    <dt class="small-12 column">Abatement Value</dt>
-                    <dd class="small-12 column text-right" data-hook="proposed-abatement-value">a</dd>
-                    <dt class="small-12 column">Taxable Assessed Value</dt>
-                    <dd class="small-12 column text-right" data-hook="proposed-taxable-value">a</dd>
-                    <dt class="small-12 column">Annual Property Tax</dt>
-                    <dd class="small-12 column text-right" data-hook="proposed-tax-value">a</dd>
+                    <dt class="small-12 column"><strong>Annual Property Tax</strong></dt>
+                    <dd class="small-12 column text-right"><strong data-hook="proposed-tax-value">N/A</strong></dd>
                   </dl>
                 </div>
 

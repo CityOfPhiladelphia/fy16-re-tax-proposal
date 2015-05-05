@@ -128,12 +128,8 @@ app.views.property = function (accountNumber) {
     app.hooks.currentAbatementValue.text(accounting.formatMoney(exempt));
     app.hooks.currentTaxableValue.text(accounting.formatMoney(taxable));
 
-
     app.hooks.proposedRate.text((rateProposed * 100) + '%');
     app.hooks.proposedTaxValue.text(accounting.formatMoney(totalProposed));
-    app.hooks.proposedMarketValue.text(accounting.formatMoney(fy16.market_value));
-    app.hooks.proposedAbatementValue.text(accounting.formatMoney(exempt));
-    app.hooks.proposedTaxableValue.text(accounting.formatMoney(taxable));
 
 
     // Clear loading...
