@@ -27,6 +27,16 @@ body {
 .front .callout {
   margin:-15px 0 1rem 5rem;
 }
+
+.h1.xtra-lg {
+  font-size: 3em;
+}
+
+hr {
+  height: 5px;
+  background: #666666;
+}
+
 @media only screen and (max-width: 40em) {
   .front .callout {
     margin:0.625rem 0 1rem 0;
@@ -34,11 +44,6 @@ body {
   .intro .fa-stack{
     display:none;
   }
-}
-.xtra-lg {
-  font-size:1.89rem;
-  line-height:1;
-  word-wrap:break-word;
 }
 .align-right{
   text-align:right;
@@ -61,20 +66,20 @@ p {
   font-size:.9rem;
 }
 .button{
-  width:100%;
+  font-size: 0.5em;
+  padding: 0.7em;
 }
 .small-text{
   font-family:"Open Sans","Arial",sans-serif;
   font-weight:normal;
   text-transform:none;
 }
+.large-text {
+  font-size: 1.2em;
+  color: #666666;
+}
 table thead tr th, table thead tr td{
     font-size:.7rem;
-}
-.panel, .bold {
-  font-family: 'Montserrat', 'Tahoma', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 .owners {
     line-height:1;
@@ -124,6 +129,10 @@ table thead tr th, table thead tr td{
 }
 .hidden{
   display:none !important;
+}
+
+.investment-details {
+  padding-left: 110px;
 }
 
 /* print-specific*/
