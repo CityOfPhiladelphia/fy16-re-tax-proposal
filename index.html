@@ -203,10 +203,6 @@
 
       <!-- School template -->
       <div data-hook="school-details" class="row">
-        <p class="text-center large-text">
-          Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
-        </p>
-
         <div class="columns">
           <h1>{{name}}</h1>
         </div>
@@ -304,8 +300,8 @@
             </tr>
             <tr>
               <td>Supplies/Equipment/Technology</td>
-              <td>{{supplies_current}}</td>
-              <td>{{supplies_proposed}}</td>
+              <td>${{supplies_current}}</td>
+              <td>${{supplies_proposed}}</td>
               <td>${{supplies_diff}}</td>
             </tr>
           </tbody>
@@ -382,7 +378,13 @@
         </div>
 
         <div class="row">
-          <div class="columns" data-hook="school-list">
+          <div class="columns">
+            <p class="text-center large-text">
+              Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
+            </p>
+
+            <div data-hook="school-list"></div>
+
           </div>
         </div>
 

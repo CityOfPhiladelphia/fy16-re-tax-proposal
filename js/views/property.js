@@ -116,7 +116,7 @@ app.views.property = function (accountNumber) {
     app.hooks.propertyTitle.find('.small-text').text('#' + state.opa.account_number);
 
     // Schools
-    app.hooks.schoolList.empty();
+    app.hooks.schoolList.text('Loading...');
 
     // Tax differences
     app.hooks.taxIncreaseAnnual.html(increaseAnnualPretty);
@@ -171,6 +171,7 @@ app.views.property = function (accountNumber) {
     });
 
     // Render schools, in order
+    app.hooks.schoolList.empty();
     renderSchool(elementarySchool, 'Elementary School');
     renderSchool(middleSchool, 'Middle School');
     renderSchool(highSchool, 'High School');
