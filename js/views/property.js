@@ -68,6 +68,21 @@ app.views.property = function (accountNumber) {
       });
   }
 
+  function bindDetailsToggleClick(rootEl) {
+    $(rootEl).off('click').on('click', '.details-toggle', function(evt) {
+      evt.preventDefault();
+      var $button = $(this),
+          $details = $button.next('.details');
+
+      $details.toggleClass('hidden');
+      if ($details.hasClass('hidden')) {
+        $button.text('Show Details');
+      } else {
+        $button.text('Hide Details');
+      }
+    });
+  }
+
   function renderOpa () {
     var state = history.state,
         fy16 = state.opa.valuation_history[0],
@@ -125,6 +140,8 @@ app.views.property = function (accountNumber) {
     app.hooks.content.empty();
 
     app.hooks.content.append(app.hooks.propertyMain);
+
+    bindDetailsToggleClick(app.hooks.propertyMain);
 
     opaRendered = true;
   }
