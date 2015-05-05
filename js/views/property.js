@@ -94,6 +94,8 @@ app.views.property = function (accountNumber) {
         totalCurrent = taxable * rateCurrent,
         increaseAnnual = totalProposed - totalCurrent,
         increaseAnnualPretty = accounting.formatMoney(increaseAnnual),
+        increaseMonth = increaseAnnual / 12,
+        increaseMonthPretty = accounting.formatMoney(increaseMonth),
         increaseWeek = increaseAnnual / 52,
         increaseWeekPretty = accounting.formatMoney(increaseWeek),
         increaseDay = increaseAnnual / 365,
@@ -118,6 +120,7 @@ app.views.property = function (accountNumber) {
 
     // Tax differences
     app.hooks.taxIncreaseAnnual.html(increaseAnnualPretty);
+    app.hooks.taxIncreaseMonth.html(increaseMonthPretty);
     app.hooks.taxIncreaseWeek.html(increaseWeekPretty);
     app.hooks.taxIncreaseDay.html(increaseDayPretty);
 
