@@ -203,6 +203,10 @@
 
       <!-- School template -->
       <div data-hook="school-details" class="row">
+        <p class="text-center large-text">
+          Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
+        </p>
+
         <div class="columns">
           <h1>{{name}}</h1>
         </div>
@@ -210,19 +214,19 @@
         <div class="columns medium-8 text-left">
           <img src="http://placehold.it/100" class="left">
           <div class="investment-details">
-            <span class="h1 xtra-lg">+{{teachers_gain}}</span><br> teaching staff
+            <span class="h1 xtra-lg">+{{teachers_gain}}</span><br> Teaching Staff
           </div>
         </div>
         <div class="columns medium-8 text-left">
           <img src="http://placehold.it/100" class="left">
           <div class="investment-details">
-            <span class="h1 xtra-lg">+{{support_gain}}</span><br> support staff
+            <span class="h1 xtra-lg">+{{support_gain}}</span><br> Support Staff
           </div>
         </div>
         <div class="columns medium-8 text-left">
           <img src="http://placehold.it/100" class="left">
           <div class="investment-details">
-            <span class="h1 xtra-lg">{{supplies_gain}}</span><br> supplies
+            <span class="h1 xtra-lg">{{supplies_gain}}</span><br> Equipent &amp; Supplies
           </div>
         </div>
 
@@ -376,12 +380,7 @@
         </div>
 
         <div class="row">
-          <div class="columns">
-            <p class="text-center large-text">
-              Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
-            </p>
-
-            <div data-hook="school-list"></div>
+          <div class="columns" data-hook="school-list">
           </div>
         </div>
 
