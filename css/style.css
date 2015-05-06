@@ -27,6 +27,10 @@ body {
 .front .callout {
   margin:-15px 0 1rem 5rem;
 }
+.school-summary-img {
+  height: 100px;
+  width: 100px;
+}
 
 .h1.xtra-lg {
   font-size: 3em;
