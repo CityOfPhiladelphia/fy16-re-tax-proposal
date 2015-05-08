@@ -143,6 +143,9 @@ app.views.property = function (accountNumber) {
     bindDetailsToggleClick(app.hooks.propertyMain);
 
     opaRendered = true;
+
+    // Rebind the tooltips that we just rendered
+    $(document).foundation('tooltip', 'reflow');
   }
 
   function renderSa () {
@@ -185,10 +188,17 @@ app.views.property = function (accountNumber) {
   function renderSchool(schoolShortName, schoolType) {
     var html = app.hooks.schoolDetails.html(),
         schoolData = app.data.school_data[schoolShortName],
-        data;
+        data, i, prop;
 
     if (!schoolData) {
       return;
+    }
+
+    for (prop in schoolData) {
+      // only if number counts
+      if (schoolData.hasOwnProperty(prop) && parseFloat(schoolData[prop])) {
+        schoolData[prop] = Math.round(parseFloat(schoolData[prop]));
+      }
     }
 
     data = {

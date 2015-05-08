@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Estimated Property Taxes for 2016 | phila.gov</title>
+    <title>Education Funding and Investments for FY16 | phila.gov</title>
     <link rel="icon" type="image/x-icon" href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
     <meta name="description" content="Learn how your real estate taxes will be invested in your local schools under the Mayor's proposed budget for fiscal year 2016.">
-    <meta property="og:title" content="Estimated Property Taxes for 2016 | phila.gov" />
+    <meta property="og:title" content="Education Funding and Investments for FY16 | phila.gov" />
     <meta property="og:url" content="http://alpha.phila.gov/fy16-property-taxes" />
-    <meta property="og:site_name" content="Estimated Property Taxes for 2016" />
+    <meta property="og:site_name" content="Education Funding and Investments for FY16" />
     <meta property="og:image" content="img/property.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1000">
@@ -43,7 +43,7 @@
         <div class="row">
           <div class="small-24 medium-24 column">
             <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale" alt="City of Philadelphia"></a>
-            <h1 class="page-title" data-hook="app-title">Estimated Property Taxes for 2016</h1>
+            <h1 class="page-title" data-hook="app-title">Education Funding and Investments for FY16</h1>
           </div>
         </div>
       </header>
@@ -56,7 +56,7 @@
         <div id="breadcrumbs" class="large-24 columns">
           <ul data-hook="crumbs" class="inline-list">
             <li><a href="http://alpha.phila.gov">alpha.phila.gov</a></li>
-            <li>Estimated Property Taxes for 2016</li>
+            <li>Education Funding and Investments for FY16</li>
           </ul>
         </div>
       </div>
@@ -130,7 +130,7 @@
 
     <div id="terms-modal" class="reveal-modal full" data-reveal aria-labelledby="modal-title" aria-hidden="true" role="dialog">
       <h3>Terms of Use</h3>
-      <p>The Office of Property Assessment of the City of Philadelphia (OPA) makes every effort to produce and publish on this site the most accurate and current infomrmation available to it. Our ownership records are based on deeds as recorded with the City of Philadelphia Department of Records (DOR), and we revise these records for currency as often as we are able. You are responsible, however, for verifying the accuracy of the information on this site by referring to the corresponding deed(s).</p>
+      <p>The Office of Property Assessment of the City of Philadelphia (OPA) makes every effort to produce and publish on this site the most accurate and current information available to it. Our ownership records are based on deeds as recorded with the City of Philadelphia Department of Records (DOR), and we revise these records for currency as often as we are able. You are responsible, however, for verifying the accuracy of the information on this site by referring to the corresponding deed(s).</p>
       <p>The OPA is not an abstract company and we do not determine who has the better title to a property if the public records conflict as to ownership. The information on this site is not intended to indicate the quality of title or priority of interest in any property, and you are advised not to rely on it for that purpose.</p>
       <p>The market values and assessed values published on this site may not reflect changes made since the last update in our database. We do not have any information as to whether taxes have been paid for any particular property.</p>
       <p>The additional City of Philadelphia terms and conditions below all apply to the information on this OPA site and to your access to and use of this information and the site.</p>
@@ -169,7 +169,7 @@
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-map-marker fa-inverse"></i>
         </span>
-        Learn how your real estate taxes will be invested in your local schools under the Mayor's proposed budget for fiscal year 2016.</p>
+        Learn how your real estate taxes will be invested in your local schools under the Mayor's proposed budget for <span data-tooltip aria-haspopup="true" title="Fiscal year 2016, or FY16, starts July 1, 2015 and ends June 30, 2016.">fiscal year 2016</span>.</p>
         <div class="callout">
           <p>You can use this application to estimate changes to your real estate taxes. By using it, you have agreed to its <a data-reveal-id="terms-modal" href="#">Terms &amp; Conditions.</a></p>
         </div>
@@ -231,7 +231,8 @@
 
         <a class="button details-toggle" href="#">Show Details</a>
 
-        <table data-hook="school-details-table" role="grid" class="details hidden" summary="The details of how your taxes will benefit {{}}">
+        <div class="details hidden">
+        <table data-hook="school-details-table" role="grid" summary="The details of how your taxes will benefit {{}}">
           <thead>
             <tr>
               <th></th>
@@ -310,6 +311,9 @@
           </tbody>
         </table>
 
+        <small>* Staffing totals are rounded to the nearest whole number but may include part-time employees.</small>
+        </div>
+
         <hr>
       </div>
 
@@ -319,7 +323,7 @@
         <div class="row text-center">
           <div class="columns">
               <p class="large-text">
-                The Mayor's proposed budget for fiscal year 2016 will increase real estate taxes from <strong>1.34%</strong> to <strong>1.4651%</strong> to invest in Philadelphia Public Schools.
+                The Mayor's proposed budget for <span data-tooltip aria-haspopup="true" title="Fiscal year 2016, or FY16, starts July 1, 2015 and ends June 30, 2016.">fiscal year 2016</span> will increase real estate taxes from <strong>1.34%</strong> to <strong>1.4651%</strong> to invest in Philadelphia Public Schools.
               </p>
 
 
@@ -330,11 +334,11 @@
                 a year
               </p>
               <p>
-                That's about <span data-hook="tax-increase-month" class="h3">...</span>
+                That's about <span data-hook="tax-increase-month" class="h1">...</span>
                 a month,
-                <span data-hook="tax-increase-week" class="h3">...</span>
+                <span data-hook="tax-increase-week" class="h1">...</span>
                 a week, or
-                <span data-hook="tax-increase-day" class="h3">...</span>
+                <span data-hook="tax-increase-day" class="h1">...</span>
                 a day
               </p>
 
@@ -374,6 +378,11 @@
                   </dl>
                 </div>
 
+                <div class="columns">
+                  <p><small>The estimated property tax does not factor in any tax relief programs or payment agreements you may have with the Department of Revenue, such as the Senior Citizen Low Income Tax Freeze.  If you have questions about those programs, please go to www.phila.gov/revenue or call 215-686-6442.</small></p>
+                  <p><small>The estimated property tax is based on your property’s assessed value for FY16 as well as a homestead exemption, abatement, or enrollment in the Longtime Owner Occupants Program (LOOP) if any apply. If you do not have a Homestead Exemption and would like to apply or have questions about your home value, please go to www.phila.gov/opa or call 215-686-9200 (in any language). If you already have an abatement or are enrolled in the Longtime Owner Occupants Program (LOOP), then you are ineligible to also have the Homestead Exemption.</small></p>
+                </div>
+
               </div>
 
             </div>
@@ -384,7 +393,7 @@
           <div class="columns">
             <p class="text-center large-text">
               Every cent of your tax dollars will be invested in your local schools. <br>
-              <strong>Here's where your money will go:</strong>
+              <strong>Your local schools will spend their investment on:</strong>
             </p>
 
             <div data-hook="school-list"></div>

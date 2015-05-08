@@ -18,4 +18,7 @@ app.views.front = function () {
   app.hooks.belowContent.children().detach();
   app.hooks.belowContent.empty();
   app.hooks.content.append(app.hooks.front);
+
+  // Rebind the tooltips that we just rendered
+  $(document).foundation('tooltip', 'reflow');
 };

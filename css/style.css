@@ -46,10 +46,17 @@ hr {
   background: #666666;
 }
 
+.panel p {
+  margin: 1em 0;
+}
+
 .small-text dt {
   font-weight: normal;
 }
-
+[data-tooltip] {
+  border-bottom: 1px dashed #000;
+  cursor: pointer;
+}
 td {
   font-family:"Open Sans","Arial",sans-serif;
   text-transform: none;
