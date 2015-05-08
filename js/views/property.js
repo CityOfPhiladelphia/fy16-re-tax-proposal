@@ -202,7 +202,7 @@ app.views.property = function (accountNumber) {
       other_diff: parseFloat(schoolData.fy16_investments_other) - parseFloat(schoolData.fy16_80m_other),
       support_services_assistants_diff: parseFloat(schoolData.fy16_investments_support_services_assistants) - parseFloat(schoolData.fy16_80m_support_services_assistants),
       nurses_health_services_diff: parseFloat(schoolData.fy16_investments_nurses_health_services) - parseFloat(schoolData.fy16_80m_nurses_health_services),
-      purchases_diff: accounting.formatMoney(parseFloat(schoolData.fy16_investments_purchases.replace(/\D/g,'')) - parseFloat(schoolData.fy16_80m_purchases.replace(/\D/g,'')))
+      purchases_diff: parseFloat(schoolData.fy16_investments_purchases.replace(/\D/g,'')) - parseFloat(schoolData.fy16_80m_purchases.replace(/\D/g,''))
     };
 
     // Teacher increase
@@ -213,7 +213,14 @@ app.views.property = function (accountNumber) {
       data.classroom_assistants_teacher_assistants_diff + data.secretaries_diff +
       data.support_services_assistants_diff + data.noontime_aides_diff + data.other_diff;
     // Supplies funds increase
-    data.purchases_total_diff = accounting.formatMoney(data.purchases_diff);
+    if (data.purchases_diff >= 10000) {
+      data.purchases_total_diff = accounting.formatMoney(
+        Math.round(data.purchases_diff / 1000)
+      ) + 'K';
+    } else {
+      data.purchases_total_diff = accounting.formatMoney(data.purchases_diff);
+    }
+    data.purchases_diff = accounting.formatMoney(data.purchases_diff);
 
     data = $.extend(data, schoolData);
 
