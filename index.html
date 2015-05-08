@@ -204,25 +204,28 @@
       <!-- School template -->
       <div data-hook="school-details" class="row">
         <div class="columns">
-          <h1>{{full_school_name}}</h1>
+          <h1 class="school-title">{{full_school_name}}</h1>
         </div>
 
         <div class="columns medium-8 text-left">
           <img src="img/teachers.png" class="left school-summary-img">
           <div class="investment-details">
-            <span class="h1 xtra-lg">+{{teachers_total_diff}}</span><br> Teaching Staff
+            <span class="h1 xtra-lg">+{{teachers_total_diff}}</span>
+            <div class="investment-label">Teaching Staff</div>
           </div>
         </div>
         <div class="columns medium-8 text-left">
           <img src="img/supportstaff.png" class="left school-summary-img">
           <div class="investment-details">
-            <span class="h1 xtra-lg">+{{support_total_diff}}</span><br> Support Staff
+            <span class="h1 xtra-lg">+{{support_total_diff}}</span>
+            <div class="investment-label">Support Staff</div>
           </div>
         </div>
         <div class="columns medium-8 text-left">
           <img src="img/schoolsupplies.png" class="left school-summary-img">
           <div class="investment-details">
-            <span class="h1 xtra-lg">{{purchases_total_diff}}</span><br> Equipment &amp; Supplies
+            <span class="h1 xtra-lg">{{purchases_total_diff}}</span>
+            <div class="investment-label">Equipment &amp; Supplies</div>
           </div>
         </div>
 
@@ -380,7 +383,8 @@
         <div class="row">
           <div class="columns">
             <p class="text-center large-text">
-              Every cent of your tax dollars will be invested in your local schools. Here's where your money will go:
+              Every cent of your tax dollars will be invested in your local schools. <br>
+              <strong>Here's where your money will go:</strong>
             </p>
 
             <div data-hook="school-list"></div>
