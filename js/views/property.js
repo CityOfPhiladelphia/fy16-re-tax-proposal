@@ -172,24 +172,50 @@ app.views.property = function (accountNumber) {
 
     // Render schools, in order
     app.hooks.schoolList.empty();
-    renderSchool(elementarySchool, 'Elementary School');
-    renderSchool(middleSchool, 'Middle School');
-    renderSchool(highSchool, 'High School');
+    renderSchool(elementarySchool);
+
+    // There are many K-8 schools
+    if (middleSchool !== elementarySchool) {
+      renderSchool(middleSchool);
+    }
+
+    renderSchool(highSchool);
   }
 
-  function renderSchool(schoolId, schoolType) {
+  function renderSchool(schoolShortName, schoolType) {
     var html = app.hooks.schoolDetails.html(),
-        data = $.extend({
-          name: schoolId + ' ' + schoolType
-        }, app.data.schools.test);
+        schoolData = app.data.school_data[schoolShortName],
+        data;
+
+    if (!schoolData) {
+      return;
+    }
+
+    data = {
+      noontime_aides_diff: parseFloat(schoolData.fy16_investments_noontime_aides) - parseFloat(schoolData.fy16_80m_noontime_aides),
+      classroom_assistants_teacher_assistants_diff: parseFloat(schoolData.fy16_investments_classroom_assistants_teacher_assistants) - parseFloat(schoolData.fy16_80m_classroom_assistants_teacher_assistants),
+      counselors_diff: parseFloat(schoolData.fy16_investments_counselors) - parseFloat(schoolData.fy16_80m_counselors),
+      teachers_special_education_diff: parseFloat(schoolData.fy16_investments_teachers_special_education) - parseFloat(schoolData.fy16_80m_teachers_special_education),
+      teachers_diff: parseFloat(schoolData.fy16_investments_teachers) - parseFloat(schoolData.fy16_80m_teachers),
+      secretaries_diff: parseFloat(schoolData.fy16_investments_secretaries) - parseFloat(schoolData.fy16_80m_secretaries),
+      principals_assistant_principals_diff: parseFloat(schoolData.fy16_investments_principals_assistant_principals) - parseFloat(schoolData.fy16_80m_principals_assistant_principals),
+      other_diff: parseFloat(schoolData.fy16_investments_other) - parseFloat(schoolData.fy16_80m_other),
+      support_services_assistants_diff: parseFloat(schoolData.fy16_investments_support_services_assistants) - parseFloat(schoolData.fy16_80m_support_services_assistants),
+      nurses_health_services_diff: parseFloat(schoolData.fy16_investments_nurses_health_services) - parseFloat(schoolData.fy16_80m_nurses_health_services),
+      purchases_diff: accounting.formatMoney(parseFloat(schoolData.fy16_investments_purchases.replace(/\D/g,'')) - parseFloat(schoolData.fy16_80m_purchases.replace(/\D/g,'')))
+    };
 
     // Teacher increase
-    data.teachers_gain = data.principals_diff + data.teachers_diff + data.special_ed_diff;
+    data.teachers_total_diff =  data.principals_assistant_principals_diff + data.teachers_diff +
+      data.teachers_special_education_diff;
     // Support staff increase
-    data.support_gain = data.counselors_diff + data.nurses_diff + data.assistants_diff +
-      data.secretaries_diff + data.support_diff + data.noon_aides_diff + data.other_diff;
+    data.support_total_diff = data.counselors_diff + data.nurses_health_services_diff +
+      data.classroom_assistants_teacher_assistants_diff + data.secretaries_diff +
+      data.support_services_assistants_diff + data.noontime_aides_diff + data.other_diff;
     // Supplies funds increase
-    data.supplies_gain = accounting.formatMoney(data.supplies_diff);
+    data.purchases_total_diff = accounting.formatMoney(data.purchases_diff);
+
+    data = $.extend(data, schoolData);
 
     // Render
     app.hooks.schoolList.append(Mustache.render(html, data));

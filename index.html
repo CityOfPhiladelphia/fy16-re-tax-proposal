@@ -204,25 +204,25 @@
       <!-- School template -->
       <div data-hook="school-details" class="row">
         <div class="columns">
-          <h1>{{name}}</h1>
+          <h1>{{full_school_name}}</h1>
         </div>
 
         <div class="columns medium-8 text-left">
           <img src="img/teachers.png" class="left school-summary-img">
           <div class="investment-details">
-            <span class="h1 xtra-lg">+{{teachers_gain}}</span><br> Teaching Staff
+            <span class="h1 xtra-lg">+{{teachers_total_diff}}</span><br> Teaching Staff
           </div>
         </div>
         <div class="columns medium-8 text-left">
           <img src="img/supportstaff.png" class="left school-summary-img">
           <div class="investment-details">
-            <span class="h1 xtra-lg">+{{support_gain}}</span><br> Support Staff
+            <span class="h1 xtra-lg">+{{support_total_diff}}</span><br> Support Staff
           </div>
         </div>
         <div class="columns medium-8 text-left">
           <img src="img/schoolsupplies.png" class="left school-summary-img">
           <div class="investment-details">
-            <span class="h1 xtra-lg">{{supplies_gain}}</span><br> Equipment &amp; Supplies
+            <span class="h1 xtra-lg">{{purchases_total_diff}}</span><br> Equipment &amp; Supplies
           </div>
         </div>
 
@@ -240,69 +240,69 @@
           <tbody>
             <tr>
               <td>Principals/Assistant Principals</td>
-              <td>{{principals_current}}</td>
-              <td>{{principals_proposed}}</td>
-              <td>+{{principals_diff}}</td>
+              <td>{{fy16_80m_principals_assistant_principals}}</td>
+              <td>{{fy16_investments_principals_assistant_principals}}</td>
+              <td>+{{principals_assistant_principals_diff}}</td>
             </tr>
             <tr>
               <td>Teachers</td>
-              <td>{{teachers_current}}</td>
-              <td>{{teachers_proposed}}</td>
+              <td>{{fy16_80m_teachers}}</td>
+              <td>{{fy16_investments_teachers}}</td>
               <td>+{{teachers_diff}}</td>
             </tr>
             <tr>
               <td>Teachers - Special Education</td>
-              <td>{{special_ed_current}}</td>
-              <td>{{special_ed_proposed}}</td>
-              <td>+{{special_ed_diff}}</td>
+              <td>{{fy16_80m_teachers_special_education}}</td>
+              <td>{{fy16_investments_teachers_special_education}}</td>
+              <td>+{{teachers_special_education_diff}}</td>
             </tr>
             <tr>
               <td>Counselors</td>
-              <td>{{counselors_current}}</td>
-              <td>{{counselors_proposed}}</td>
+              <td>{{fy16_80m_counselors}}</td>
+              <td>{{fy16_investments_counselors}}</td>
               <td>+{{counselors_diff}}</td>
             </tr>
             <tr>
               <td>Nurses/Health Services</td>
-              <td>{{nurses_current}}</td>
-              <td>{{nurses_proposed}}</td>
-              <td>+{{nurses_diff}}</td>
+              <td>{{fy16_80m_nurses_health_services}}</td>
+              <td>{{fy16_investments_nurses_health_services}}</td>
+              <td>+{{nurses_health_services_diff}}</td>
             </tr>
             <tr>
               <td>Classroom Assistants</td>
-              <td>{{assistants_current}}</td>
-              <td>{{assistants_proposed}}</td>
-              <td>+{{assistants_diff}}</td>
+              <td>{{fy16_80m_classroom_assistants_teacher_assistants}}</td>
+              <td>{{fy16_investments_classroom_assistants_teacher_assistants}}</td>
+              <td>+{{classroom_assistants_teacher_assistants_diff}}</td>
             </tr>
             <tr>
               <td>Secretaries</td>
-              <td>{{secretaries_current}}</td>
-              <td>{{secretaries_proposed}}</td>
+              <td>{{fy16_80m_secretaries}}</td>
+              <td>{{fy16_investments_secretaries}}</td>
               <td>+{{secretaries_diff}}</td>
             </tr>
             <tr>
               <td>Support Services</td>
-              <td>{{support_current}}</td>
-              <td>{{support_proposed}}</td>
-              <td>+{{support_diff}}</td>
+              <td>{{fy16_80m_support_services_assistants}}</td>
+              <td>{{fy16_investments_support_services_assistants}}</td>
+              <td>+{{support_services_assistants_diff}}</td>
             </tr>
             <tr>
               <td>Noon-time Aides</td>
-              <td>{{noon_aides_current}}</td>
-              <td>{{noon_aides_proposed}}</td>
-              <td>+{{noon_aides_diff}}</td>
+              <td>{{fy16_80m_noontime_aides}}</td>
+              <td>{{fy16_investments_noontime_aides}}</td>
+              <td>+{{noontime_aides_diff}}</td>
             </tr>
             <tr>
               <td>Other</td>
-              <td>{{other_current}}</td>
-              <td>{{other_proposed}}</td>
+              <td>{{fy16_80m_other}}</td>
+              <td>{{fy16_investments_other}}</td>
               <td>+{{other_diff}}</td>
             </tr>
             <tr>
               <td>Supplies/Equipment/Technology</td>
-              <td>${{supplies_current}}</td>
-              <td>${{supplies_proposed}}</td>
-              <td>${{supplies_diff}}</td>
+              <td>{{fy16_80m_purchases}}</td>
+              <td>{{fy16_investments_purchases}}</td>
+              <td>{{purchases_diff}}</td>
             </tr>
           </tbody>
         </table>
