@@ -55,7 +55,7 @@ hr {
 }
 [data-tooltip] {
   border-bottom: 1px dashed #000;
-  cursor: pointer;
+  cursor: help;
 }
 td {
   font-family:"Open Sans","Arial",sans-serif;
