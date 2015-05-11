@@ -3,6 +3,11 @@ body {
   investigate further */
   overflow-x:hidden;
 }
+.browsehappy {
+  background: #edf4f7;
+  margin: 0;
+  padding: 1em;
+}
 .search-head .small-text {
   margin-top: -20px;
 }
