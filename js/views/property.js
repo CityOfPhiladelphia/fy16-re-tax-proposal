@@ -37,7 +37,8 @@ app.views.property = function (accountNumber) {
 
   function getOpaData () {
     alreadyGettingOpaData = true;
-    $.ajax('https://api.phila.gov/opa/v1.1/account/' + accountNumber + '?format=json')
+    $.ajax('https://api.phila.gov/opa/v1.1/account/' + accountNumber + '?format=json',
+      {dataType: app.settings.ajaxType})
       .done(function (data) {
         var state = $.extend({}, history.state);
         var property = data.data.property;
@@ -54,7 +55,8 @@ app.views.property = function (accountNumber) {
   }
 
   function getSaData () {
-    $.ajax('https://api.phila.gov/ulrs/v3/addresses/' + encodeURIComponent(history.state.address) + '/service-areas?format=json')
+    $.ajax('https://api.phila.gov/ulrs/v3/addresses/' + encodeURIComponent(history.state.address) +
+      '/service-areas?format='+app.settings.ajaxType, {dataType: app.settings.ajaxType})
       .done(function (data) {
         var state = $.extend({}, history.state);
         state.sa = data.serviceAreaValues;
