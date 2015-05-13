@@ -193,6 +193,9 @@ app.views.property = function (accountNumber) {
         data, i, prop;
 
     if (!schoolData) {
+      if (console && console.warn) {
+        console.warn('no data found for ' + schoolShortName);
+      }
       return;
     }
 
