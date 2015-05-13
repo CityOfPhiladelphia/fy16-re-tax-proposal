@@ -184,7 +184,10 @@ app.views.property = function (accountNumber) {
       renderSchool(middleSchool);
     }
 
-    renderSchool(highSchool);
+    // There are some combined middle and high schools
+    if (middleSchool !== highSchool) {
+      renderSchool(highSchool);
+    }
 
     // Rebind the tooltips that we just rendered
     $(document).foundation('tooltip', 'reflow');
