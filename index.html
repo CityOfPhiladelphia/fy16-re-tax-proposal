@@ -206,6 +206,17 @@
         <h1></h1><div class="small-text"></div>
       </div>
 
+      <!-- No School Data template -->
+      <div data-hook="no-school-data" class="row">
+        <div class="columns">
+          <h1 class="school-title">{{short_school_name}}</h1>
+        </div>
+
+        <p class="large-text">
+          FY16 budget data is not available for this school at this time. Data is only available for District-operated schools.
+        </p>
+      </div>
+
       <!-- School template -->
       <div data-hook="school-details" class="row">
         <div class="columns">
@@ -237,7 +248,7 @@
         <a class="button details-toggle" href="#">Show Details</a>
 
         <div class="details hidden">
-        <table data-hook="school-details-table" role="grid" summary="The details of how your taxes will benefit {{}}">
+        <table data-hook="school-details-table" role="grid" summary="The details of how your taxes will benefit {{full_school_name}}">
           <thead>
             <tr>
               <th></th>

@@ -195,6 +195,7 @@ app.views.property = function (accountNumber) {
 
   function renderSchool(schoolShortName, schoolType) {
     var html = app.hooks.schoolDetails.html(),
+        noSchoolDataHtml = app.hooks.noSchoolData.html(),
         schoolData = app.data.school_data[schoolShortName],
         data, i, prop;
 
@@ -202,6 +203,8 @@ app.views.property = function (accountNumber) {
       if (console && console.warn) {
         console.warn('no data found for ' + schoolShortName);
       }
+
+      app.hooks.schoolList.append(Mustache.render(noSchoolDataHtml, {short_school_name: schoolShortName}));
       return;
     }
 
