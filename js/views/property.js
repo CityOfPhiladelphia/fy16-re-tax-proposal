@@ -185,6 +185,9 @@ app.views.property = function (accountNumber) {
     }
 
     renderSchool(highSchool);
+
+    // Rebind the tooltips that we just rendered
+    $(document).foundation('tooltip', 'reflow');
   }
 
   function renderSchool(schoolShortName, schoolType) {
