@@ -1,55 +1,6 @@
 app = app || {};
 app.data = app.data || {};
 
-
-app.data.schools = {
-  test: {
-    'principals_current': 10,
-    'principals_proposed': 15,
-    'principals_diff': 5,
-
-    'teachers_current': 10,
-    'teachers_proposed': 15,
-    'teachers_diff': 5,
-
-    'special_ed_current': 10,
-    'special_ed_proposed': 15,
-    'special_ed_diff': 5,
-
-    'counselors_current': 10,
-    'counselors_proposed': 15,
-    'counselors_diff': 5,
-
-    'nurses_current': 10,
-    'nurses_proposed': 15,
-    'nurses_diff': 5,
-
-    'assistants_current': 10,
-    'assistants_proposed': 15,
-    'assistants_diff': 5,
-
-    'secretaries_current': 10,
-    'secretaries_proposed': 15,
-    'secretaries_diff': 5,
-
-    'support_current': 10,
-    'support_proposed': 15,
-    'support_diff': 5,
-
-    'noon_aides_current': 10,
-    'noon_aides_proposed': 15,
-    'noon_aides_diff': 5,
-
-    'other_current': 10,
-    'other_proposed': 15,
-    'other_diff': 5,
-
-    'supplies_current': 10000,
-    'supplies_proposed': 15000,
-    'supplies_diff': 5000
-  }
-};
-
 app.data.school_data = {
   "Bartram HS": {
     "fy16_investments_noontime_aides": "8",
@@ -3346,6 +3297,38 @@ app.data.school_data = {
     "fy16_80m_other": "7",
     "fy16_80m_principals_assistant_principals": "1",
     "fy16_80m_classroom_assistants_teacher_assistants": "6"
+  },
+  "Jenks, John": {
+    "fy16_investments_noontime_aides": "1",
+    "fy16_investments_classroom_assistants_teacher_assistants": "5",
+    "fy16_investments_counselors": "2",
+    "fy16_investments_teachers_special_education": "6",
+    "fy16_80m_teachers_special_education": "6",
+    "fy16_economic_disadvantaged_percent": "35.86%",
+    "fy16_investments_teachers": "24",
+    "fy16_80m_secretaries": "1",
+    "fy16_80m_nurses_health_services": "1",
+    "fy16_80m_noontime_aides": "1",
+    "fy16_investments_secretaries": "1",
+    "fy16_investments_total_positions": "50",
+    "fy16_enrollment": "437",
+    "fy16_80m_counselors": "1",
+    "fy16_investments_principals_assistant_principals": "1",
+    "fy16_investments_other": "5",
+    "full_school_name": "JENKS ACADEMY FOR ARTS AND SCIENCES",
+    "fy16_80m_purchases": "$96,534",
+    "fy16_80m_support_services_assistants": "1",
+    "fy16_investments_support_services_assistants": "4",
+    "school_code": "6270",
+    "fy16_investments_nurses_health_services": "1",
+    "fy16_investments_purchases": "$230,614",
+    "fy16_80m_total_positions": "45",
+    "fy16_80m_teachers": "24",
+    "councilmanic_starting_2016": "8th Councilmanic District",
+    "oit_code": "Jenks, John",
+    "fy16_80m_other": "5",
+    "fy16_80m_principals_assistant_principals": "1",
+    "fy16_80m_classroom_assistants_teacher_assistants": "4"
   },
   "McCloskey": {
     "fy16_investments_noontime_aides": "3",
